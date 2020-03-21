@@ -26,7 +26,11 @@ public class SearchTests {
         //it's the easiest way to collect all of them
         List<WebElement> searchItems=driver.findElements(By.tagName("h3"));
         for (WebElement searchItem: searchItems) {
-            System.out.println(searchItem.getText());
+          String var = searchItem.getText();
+          // if there is a text - print it
+          if (!var.isEmpty()){
+              System.out.println(var);
+          }
         }
     }
 
